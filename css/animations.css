@@ -1,0 +1,104 @@
+/* =============================================================
+   CPPEM · Animações
+   Keyframes, scroll reveal e orbs flutuantes
+============================================================= */
+
+/* ==================== KEYFRAMES ==================== */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 0 0 rgba(201, 162, 39, 0.55),
+      0 8px 28px rgba(201, 162, 39, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px rgba(201, 162, 39, 0),
+      0 8px 28px rgba(201, 162, 39, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes pulseDot {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 94, 94, 0.7); }
+  70%  { box-shadow: 0 0 0 12px rgba(255, 94, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 94, 94, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(40px, -30px) scale(1.05); }
+  66%      { transform: translate(-30px, 40px) scale(0.95); }
+}
+
+/* ==================== ORBS FLUTUANTES (HERO) ==================== */
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  will-change: transform;
+  animation: float 12s ease-in-out infinite;
+}
+
+.floating-orb.orb-1 {
+  width: 320px;
+  height: 320px;
+  top: 10%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.6), transparent 70%);
+}
+
+.floating-orb.orb-2 {
+  width: 380px;
+  height: 380px;
+  bottom: 5%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(30, 47, 94, 0.9), transparent 70%);
+  animation-delay: -4s;
+}
+
+.floating-orb.orb-3 {
+  width: 240px;
+  height: 240px;
+  top: 50%;
+  left: 50%;
+  background: radial-gradient(circle, rgba(232, 195, 80, 0.3), transparent 70%);
+  animation-delay: -8s;
+}
+
+/* ==================== SCROLL REVEAL ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-stagger.in-view > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.in-view > *:nth-child(1) { transition-delay: 0.05s; }
+.reveal-stagger.in-view > *:nth-child(2) { transition-delay: 0.15s; }
+.reveal-stagger.in-view > *:nth-child(3) { transition-delay: 0.25s; }
+.reveal-stagger.in-view > *:nth-child(4) { transition-delay: 0.35s; }
+.reveal-stagger.in-view > *:nth-child(5) { transition-delay: 0.45s; }
+.reveal-stagger.in-view > *:nth-child(6) { transition-delay: 0.55s; }
+
+/* Reduce motion override */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+  .reveal-stagger > * { opacity: 1; transform: none; }
+}

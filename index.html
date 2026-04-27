@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Colégio CPPEM — Bolsa de Acolhimento de 50%. Vagas limitadas para alunos em transferência. Tecnologia de ponta, disciplina e excelência em Caruaru/PE.">
+  <meta name="theme-color" content="#0D1B3E">
+  <meta property="og:title" content="Colégio CPPEM · Bolsa de Acolhimento 50%">
+  <meta property="og:description" content="O Porto Seguro para o Futuro do seu Filho. 15 vagas com 50% de bolsa fixa para alunos em transferência.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo-cppem.png">
+
+  <title>Colégio CPPEM · Bolsa de Acolhimento — O Porto Seguro para o Futuro do seu Filho</title>
+
+  <link rel="icon" type="image/png" href="assets/logo-cppem.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="bg-navy text-white antialiased">
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav class="navbar" id="navbar">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="assets/logo-cppem.png" alt="Brasão Colégio CPPEM" class="w-9 h-9 object-contain" />
+      <span class="font-display text-[12px] font-bold text-gold tracking-[0.18em] hidden sm:block">COLÉGIO CPPEM</span>
+    </a>
+    <ul class="hidden md:flex items-center gap-7 text-[11px] uppercase tracking-[0.18em] text-muted font-display">
+      <li><a href="#oferta" class="hover:text-gold transition">A Bolsa</a></li>
+      <li><a href="#diferenciais" class="hover:text-gold transition">Diferenciais</a></li>
+      <li><a href="#economia" class="hover:text-gold transition">Economia</a></li>
+      <li><a href="#resultados" class="hover:text-gold transition">Resultados</a></li>
+      <li><a href="#contato" class="hover:text-gold transition">Contato</a></li>
+    </ul>
+    <a href="#cta-whatsapp" class="btn-ghost hidden md:inline-flex" data-cta>
+      Reservar Vaga
+    </a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<header id="top" class="hero">
+  <div class="hero-bg" id="heroBg">
+    <div class="hero-photo-layer" aria-hidden="true"></div>
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full">
+
+    <div class="reveal text-center mb-6 md:mb-8 flex justify-center" style="transition-delay: 0.1s">
+      <span class="inline-flex items-center gap-2 font-display text-[10px] md:text-[11px] font-semibold tracking-[0.3em] uppercase text-gold border border-[color:var(--border)] px-4 py-2 backdrop-blur">
+        <span class="pulse-dot"></span>
+        Bolsa de Acolhimento · 2026
+      </span>
+    </div>
+
+    <div class="reveal flex justify-center mb-8" style="transition-delay: 0.2s">
+      <div class="crest-ring">
+        <img src="assets/logo-cppem.png" alt="Brasão Colégio CPPEM" />
+      </div>
+    </div>
+
+    <h1 class="reveal font-display font-black text-center leading-[1.05] tracking-tight mx-auto" style="transition-delay: 0.3s; font-size: clamp(2.4rem, 6vw, 5rem); max-width: 18ch;">
+      O Porto Seguro<br>
+      <span class="text-gold">para o Futuro</span><br>
+      do seu Filho.
+    </h1>
+
+    <p class="reveal font-serif italic text-center mx-auto mt-6 md:mt-8 text-gold-pale leading-relaxed" style="transition-delay: 0.4s; font-size: clamp(1rem, 1.6vw, 1.25rem); max-width: 56ch;">
+      Condição exclusiva de transferência para alunos em busca de continuidade.
+      Garanta <strong class="not-italic text-white">50% de bolsa fixa</strong> e tecnologia de ponta em uma escola que forma para a vida.
+    </p>
+
+    <div class="reveal flex flex-col sm:flex-row gap-4 justify-center items-center mt-10" style="transition-delay: 0.5s">
+      <a href="#cta-whatsapp" class="btn-cta" data-cta>
+        Reservar Minha Vaga via WhatsApp
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#diferenciais" class="btn-ghost">Ver Diferenciais</a>
+    </div>
+
+    <div class="reveal mt-14 md:mt-20 mx-auto max-w-3xl glass corner-frame p-6 md:p-8" style="transition-delay: 0.6s">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+        <div class="flex items-center gap-4">
+          <div class="pulse-dot" style="width:12px;height:12px;"></div>
+          <div class="text-left">
+            <p class="chapter-label mb-1">Vagas Restantes</p>
+            <p class="font-display font-black text-3xl md:text-4xl text-gold leading-none">
+              <span id="vagasRestantes">15</span>
+              <span class="text-white/50 text-base font-normal ml-2">de 15</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="hidden md:block w-px h-16 bg-[color:var(--border)]"></div>
+
+        <div class="flex-1 w-full">
+          <p class="chapter-label mb-3 text-center md:text-left">Encerra em — Julho/2026</p>
+          <div class="flex gap-2" id="countdown" aria-live="polite">
+            <div class="countdown-box">
+              <div class="countdown-num" id="cdDays">00</div>
+              <div class="countdown-label">Dias</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="cdHours">00</div>
+              <div class="countdown-label">Horas</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="cdMin">00</div>
+              <div class="countdown-label">Min</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="cdSec">00</div>
+              <div class="countdown-label">Seg</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal flex justify-center mt-12" style="transition-delay: 0.8s">
+      <div class="w-px h-16 bg-gradient-to-b from-transparent via-gold to-transparent"></div>
+    </div>
+
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ============================================================
+     FAIXA VISUAL — VIDA NO CPPEM
+============================================================ -->
+<section class="relative py-16 md:py-20 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+
+    <div class="reveal text-center max-w-2xl mx-auto mb-10">
+      <p class="chapter-label mb-3">Vida no CPPEM</p>
+      <h2 class="font-display font-bold text-2xl md:text-4xl mb-3">Um Ambiente Que <span class="text-gold">Forma Caráter</span></h2>
+      <div class="accent-line mx-auto"></div>
+    </div>
+
+    <div class="reveal-stagger grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+
+      <div class="student-photo aspect-[3/4] flex items-end p-4">
+        <div class="relative z-10">
+          <p class="font-display text-[10px] tracking-[0.2em] uppercase text-gold">Disciplina</p>
+          <p class="font-serif italic text-white/85 text-xs mt-1">Postura e foco</p>
+        </div>
+        <div class="absolute inset-0 student-bg-1"></div>
+      </div>
+
+      <div class="student-photo aspect-[3/4] flex items-end p-4">
+        <div class="relative z-10">
+          <p class="font-display text-[10px] tracking-[0.2em] uppercase text-gold">Cerimônia</p>
+          <p class="font-serif italic text-white/85 text-xs mt-1">Hino e bandeira</p>
+        </div>
+        <div class="absolute inset-0 student-bg-2"></div>
+      </div>
+
+      <div class="student-photo aspect-[3/4] flex items-end p-4">
+        <div class="relative z-10">
+          <p class="font-display text-[10px] tracking-[0.2em] uppercase text-gold">Tecnologia</p>
+          <p class="font-serif italic text-white/85 text-xs mt-1">Sala conectada</p>
+        </div>
+        <div class="absolute inset-0 student-bg-3"></div>
+      </div>
+
+      <div class="student-photo aspect-[3/4] flex items-end p-4">
+        <div class="relative z-10">
+          <p class="font-display text-[10px] tracking-[0.2em] uppercase text-gold">Comunidade</p>
+          <p class="font-serif italic text-white/85 text-xs mt-1">Convivência e fé</p>
+        </div>
+        <div class="absolute inset-0 student-bg-4"></div>
+      </div>
+    </div>
+
+    <p class="text-center text-muted text-xs mt-6 italic font-serif">* Imagens reais dos alunos serão disponibilizadas após a divulgação oficial da turma 2026.</p>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================================
+     SEÇÃO OFERTA / ECONOMIA
+============================================================ -->
+<section id="oferta" class="relative py-20 md:py-28 bg-noise">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+
+    <div class="reveal text-center max-w-2xl mx-auto mb-14">
+      <p class="chapter-label mb-3">Capítulo 01 · A Oferta</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-4">O Que Significa <span class="text-gold">50% de Bolsa</span></h2>
+      <div class="accent-line mx-auto mb-6"></div>
+      <p class="text-white/75">
+        Não é desconto promocional. É um compromisso institucional de acolhimento — bolsa fixa, válida por todo o ano letivo de 2026, sem letras miúdas.
+      </p>
+    </div>
+
+    <div id="economia" class="reveal-stagger grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+      <div class="price-card glass p-8 corner-frame">
+        <p class="chapter-label mb-4 text-muted">Sem Bolsa</p>
+        <p class="font-display font-bold text-2xl text-white/80 mb-1">Mensalidade Cheia</p>
+        <p class="text-white/50 text-sm mb-6">12 parcelas anuais</p>
+
+        <div class="space-y-3 mb-6">
+          <div class="flex justify-between items-baseline border-b border-[color:var(--border-soft)] pb-2">
+            <span class="text-white/65 text-sm">Mensalidade</span>
+            <span class="price-old font-display">R$ 1.499</span>
+          </div>
+          <div class="flex justify-between items-baseline border-b border-[color:var(--border-soft)] pb-2">
+            <span class="text-white/65 text-sm">Anual (12x)</span>
+            <span class="price-old font-display text-xl">R$ 17.988</span>
+          </div>
+        </div>
+        <p class="text-white/50 text-xs italic">Valor de referência da turma — sem qualquer benefício de transferência.</p>
+      </div>
+
+      <div class="price-card glass-gold p-8 corner-frame highlight">
+        <div class="flex items-center justify-between mb-4">
+          <p class="chapter-label">Com Bolsa de Acolhimento</p>
+          <span class="text-[10px] font-display font-bold tracking-[0.15em] uppercase bg-gold text-navy px-2 py-1">50% OFF</span>
+        </div>
+        <p class="font-display font-bold text-2xl text-white mb-1">Sua Condição Real</p>
+        <p class="text-gold-pale text-sm mb-6">Bolsa fixa por todo 2026</p>
+
+        <div class="space-y-3 mb-6">
+          <div class="flex justify-between items-baseline border-b border-[color:var(--border)] pb-2">
+            <span class="text-white/85 text-sm">Mensalidade</span>
+            <span class="font-display text-2xl text-gold font-bold">R$ 749,50</span>
+          </div>
+          <div class="flex justify-between items-baseline border-b border-[color:var(--border)] pb-2">
+            <span class="text-white/85 text-sm">Anual (12x)</span>
+            <span class="font-display text-2xl text-gold font-bold">R$ 8.994</span>
+          </div>
+        </div>
+
+        <div class="economy-box">
+          <p class="text-[10px] tracking-[0.2em] uppercase text-gold-pale font-display mb-1">Sua Economia Anual</p>
+          <p class="font-display font-black text-3xl md:text-4xl text-gold">R$ 8.994,00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal text-center mt-12">
+      <a href="#cta-whatsapp" class="btn-cta" data-cta>
+        Quero Garantir os 50% de Bolsa
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <p class="text-white/50 text-xs mt-4 italic">* Valores ilustrativos da bolsa. Confirme sua série e disponibilidade pelo WhatsApp.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================================
+     DIFERENCIAIS TECNOLÓGICOS
+============================================================ -->
+<section id="diferenciais" class="relative py-20 md:py-28 bg-grid bg-noise">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+
+    <div class="reveal text-center max-w-2xl mx-auto mb-16">
+      <p class="chapter-label mb-3">Capítulo 02 · Tecnologia + Excelência</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-4">Diferenciais que Você <span class="text-gold">Vê na Prática</span></h2>
+      <div class="accent-line mx-auto mb-6"></div>
+      <p class="text-white/75">
+        Não vendemos promessas. Mostramos a estrutura e os sistemas que fazem o CPPEM ser uma escola séria, conectada e voltada para o futuro real do seu filho.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <div class="feature-card">
+        <span class="feature-num">01</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M4 4h16v3H4zM4 10h16v3H4zM4 16h16v3H4z"/>
+            <circle cx="6.5" cy="5.5" r="0.6" fill="currentColor"/>
+            <circle cx="6.5" cy="11.5" r="0.6" fill="currentColor"/>
+            <circle cx="6.5" cy="17.5" r="0.6" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-gold text-base font-bold tracking-wide mb-2">Sistema Rio de Janeiro</h3>
+        <p class="text-white/65 text-sm leading-relaxed">Material didático estruturado, alinhado às maiores referências educacionais do país. Conteúdo de qualidade da editora ao caderno do aluno.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-num">02</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-gold text-base font-bold tracking-wide mb-2">Plano de Combate</h3>
+        <p class="text-white/65 text-sm leading-relaxed">Preparação intensiva para concursos militares e federais. Simulados no padrão CESPE, FGV e VUNESP, com correção de redação e mentoria.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-num">03</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="5" width="18" height="16" rx="1.5"/>
+            <path d="M3 9h18M8 3v4M16 3v4M8 14h3M8 17h6"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-gold text-base font-bold tracking-wide mb-2">AgendaEdu</h3>
+        <p class="text-white/65 text-sm leading-relaxed">App oficial da escola no celular dos pais. Comunicados, frequência, boletins e mensagens em tempo real — tudo na palma da mão.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-num">04</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="3.5"/>
+            <path d="M5 21c0-3.5 3.13-6 7-6s7 2.5 7 6"/>
+            <path d="M16 4l1.5 1.5L20 3"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-gold text-base font-bold tracking-wide mb-2">Mentoria Personalizada</h3>
+        <p class="text-white/65 text-sm leading-relaxed">Acompanhamento individual de Projeto de Vida. Cada aluno tem um caminho — e um mentor para ajudar a trilhá-lo com clareza.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-num">05</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-gold text-base font-bold tracking-wide mb-2">Disciplina Real</h3>
+        <p class="text-white/65 text-sm leading-relaxed">Uniforme padronizado, postura, ritos cívicos e convivência respeitosa. Estrutura que transforma o foco em hábito — sem rigidez vazia.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-num">06</span>
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="4" width="18" height="14" rx="1.5"/>
+            <path d="M8 8h8M8 12h5M8 16h7"/>
+            <circle cx="17" cy="14" r="2"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-gold text-base font-bold tracking-wide mb-2">Disciplinas do Século XXI</h3>
+        <p class="text-white/65 text-sm leading-relaxed">Projeto de Vida, Empreendedorismo, Educação Financeira e Inteligência Artificial. Habilidades que a escola tradicional ainda não ensina.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================================
+     POR QUE ESCOLHER (RAZÕES)
+============================================================ -->
+<section class="relative py-20 md:py-28">
+  <div class="max-w-5xl mx-auto px-6 md:px-10">
+
+    <div class="reveal text-center max-w-2xl mx-auto mb-12">
+      <p class="chapter-label mb-3">Capítulo 03 · A Transição</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-4">A Mudança de Escola <span class="text-gold">Pode Ser Boa.</span></h2>
+      <div class="accent-line mx-auto mb-6"></div>
+      <p class="text-white/75">
+        Sabemos que essa decisão pesa. Por isso, criamos a Bolsa de Acolhimento — para que a única coisa que mude na rotina da sua família seja a qualidade do ensino.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid md:grid-cols-2 gap-3">
+      <div class="reason-row">
+        <span class="reason-check">✓</span>
+        <p class="text-white/80 text-sm m-0">Adaptação acompanhada por professores e coordenação pedagógica desde o primeiro dia.</p>
+      </div>
+      <div class="reason-row">
+        <span class="reason-check">✓</span>
+        <p class="text-white/80 text-sm m-0">Bolsa fixa de 50% — sem reajuste no meio do ano, sem letras miúdas.</p>
+      </div>
+      <div class="reason-row">
+        <span class="reason-check">✓</span>
+        <p class="text-white/80 text-sm m-0">Material didático Sistema Rio de Janeiro incluso na mensalidade.</p>
+      </div>
+      <div class="reason-row">
+        <span class="reason-check">✓</span>
+        <p class="text-white/80 text-sm m-0">Prédio em Caruaru/PE, ao lado da Coletivo, na Praça Getúlio Vargas.</p>
+      </div>
+      <div class="reason-row">
+        <span class="reason-check">✓</span>
+        <p class="text-white/80 text-sm m-0">Credenciamento oficial da Secretaria Estadual de Pernambuco (Portaria 9097).</p>
+      </div>
+      <div class="reason-row">
+        <span class="reason-check">✓</span>
+        <p class="text-white/80 text-sm m-0">Reserva de vaga simples e direta — feita pelo WhatsApp, sem burocracia inicial.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================================
+     RESULTADOS / PROVA SOCIAL
+============================================================ -->
+<section id="resultados" class="relative py-20 md:py-28 bg-grid">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+
+    <div class="reveal text-center max-w-2xl mx-auto mb-14">
+      <p class="chapter-label mb-3">Capítulo 04 · Resultados Reais</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-4">Onde Nossos Alunos <span class="text-gold">Chegam</span></h2>
+      <div class="accent-line mx-auto mb-6"></div>
+      <p class="text-white/75">
+        O CPPEM nasce com o DNA do CPEM Concursos — referência regional em aprovações para Forças Armadas, segurança pública e carreiras federais.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="stat-card">
+        <div class="stat-num" data-count="1500" data-suffix="+">0+</div>
+        <p class="text-[10px] tracking-[0.2em] uppercase text-muted font-display">Alunos Formados</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-count="300" data-suffix="+">0+</div>
+        <p class="text-[10px] tracking-[0.2em] uppercase text-muted font-display">Aprovações em Concursos</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-count="12" data-suffix=" anos">0 anos</div>
+        <p class="text-[10px] tracking-[0.2em] uppercase text-muted font-display">De História CPEM</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-count="100" data-suffix="%">0%</div>
+        <p class="text-[10px] tracking-[0.2em] uppercase text-muted font-display">Foco em Carreira Estável</p>
+      </div>
+    </div>
+
+    <div class="reveal max-w-4xl mx-auto">
+      <p class="chapter-label text-center mb-6">Carreiras Foco · Forças Armadas & Segurança Pública</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="glass p-4 text-center"><p class="font-display text-gold-pale text-xs tracking-wide">Marinha</p><p class="text-[10px] text-muted mt-1">EN · EAM</p></div>
+        <div class="glass p-4 text-center"><p class="font-display text-gold-pale text-xs tracking-wide">Exército</p><p class="text-[10px] text-muted mt-1">EsPCEx · ESA</p></div>
+        <div class="glass p-4 text-center"><p class="font-display text-gold-pale text-xs tracking-wide">Aeronáutica</p><p class="text-[10px] text-muted mt-1">EPCAR · AFA</p></div>
+        <div class="glass p-4 text-center"><p class="font-display text-gold-pale text-xs tracking-wide">Segurança</p><p class="text-[10px] text-muted mt-1">PRF · PF · PM</p></div>
+      </div>
+    </div>
+
+    <div class="reveal max-w-3xl mx-auto mt-16 text-center">
+      <p class="font-serif italic text-gold-pale leading-relaxed" style="font-size: clamp(1.1rem, 2vw, 1.5rem);">
+        “Não somos uma escola que prepara para a próxima prova. Somos uma escola que prepara para a próxima década.”
+      </p>
+      <p class="chapter-label mt-4">— Direção Pedagógica · Colégio CPPEM</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============================================================
+     CTA FINAL — WHATSAPP
+============================================================ -->
+<section id="cta-whatsapp" class="cta-final relative py-24 md:py-32 overflow-hidden">
+
+  <div class="cta-final-bg absolute inset-0 z-0">
+    <div class="cta-bg-glow"></div>
+    <div class="cta-bg-grid"></div>
+  </div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6 md:px-10 text-center">
+
+    <div class="reveal">
+      <p class="chapter-label mb-4">Última Etapa · Reserva de Vaga</p>
+      <h2 class="font-display font-bold text-3xl md:text-5xl mb-6 leading-tight">
+        Restam <span class="text-gold" id="vagasRestantesCTA">15</span> Vagas.<br>
+        <span class="text-gold-pale font-serif italic font-normal text-2xl md:text-4xl">A sua pode ser uma delas.</span>
+      </h2>
+      <div class="accent-line mx-auto mb-8"></div>
+
+      <p class="text-white/75 mb-10 max-w-xl mx-auto">
+        Clique no botão abaixo e converse direto com a coordenação pelo WhatsApp.
+        Levamos menos de 2 minutos para confirmar sua bolsa e iniciar a reserva.
+      </p>
+
+      <a href="#" id="whatsappBtn" target="_blank" rel="noopener noreferrer" class="btn-cta btn-cta-large">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.3-.2-.6-.3z M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3 1.2 4.7 1.2h.1c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-2.9-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.8-1.3-4.4 0-4.5 3.7-8.2 8.2-8.2 4.5 0 8.2 3.7 8.2 8.2.1 4.6-3.6 8.3-8.1 8.3z"/></svg>
+        RESERVAR MINHA VAGA VIA WHATSAPP
+      </a>
+
+      <p class="text-muted text-xs mt-6 italic">Resposta em até 30 minutos · Atendimento Seg-Sex, 8h–18h</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="site-footer">
+  <div class="max-w-5xl mx-auto px-6 md:px-10">
+
+    <div class="flex flex-col items-center mb-8">
+      <img src="assets/logo-cppem.png" alt="Brasão Colégio CPPEM" class="w-20 h-20 object-contain mb-4" />
+      <p class="font-display text-gold text-xs tracking-[0.25em] mb-2">COLÉGIO CPPEM</p>
+      <p class="font-serif italic text-gold-pale text-sm">Fé Cristã · Disciplina · Estabilidade · Liberdade</p>
+    </div>
+
+    <div id="contato" class="grid md:grid-cols-3 gap-6 text-center md:text-left mb-10 pt-8 border-t border-[color:var(--border-soft)]">
+      <div>
+        <p class="chapter-label mb-2">Endereço</p>
+        <p class="text-white/70 text-sm">Praça Presidente Getúlio Vargas, 119<br>Caruaru — PE · Ao lado da Coletivo</p>
+      </div>
+      <div>
+        <p class="chapter-label mb-2">Contato</p>
+        <p class="text-white/70 text-sm">colegiocppem@gmail.com<br>+55 (81) 99408-6174</p>
+      </div>
+      <div>
+        <p class="chapter-label mb-2">Redes Sociais</p>
+        <div class="flex gap-3 justify-center md:justify-start mt-1">
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.5l.5-3h-3V9c0-.9.3-1.5 1.6-1.5H17V5c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.1V11H8v3h2.5v7h3z"/></svg>
+          </a>
+          <a id="whatsappFooter" href="#" aria-label="WhatsApp" class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3 1.2 4.7 1.2h.1c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-[color:var(--border-soft)] pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted">
+      <p>© 2026 CPPEM Colégio e Cursos LTDA · CNPJ 57.347.872/0001-48</p>
+      <p>Portaria de Credenciamento Nº 9097 — Secretaria Estadual de Pernambuco</p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY CTA (MOBILE) -->
+<a href="#" id="stickyCta" class="sticky-cta btn-cta">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3 1.2 4.7 1.2h.1c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+  RESERVAR MINHA VAGA · 50% DE BOLSA
+</a>
+
+<!-- SCRIPTS -->
+<script src="js/config.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/scroll-effects.js"></script>
+<script src="js/counters.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

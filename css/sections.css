@@ -1,0 +1,375 @@
+/* =============================================================
+   CPPEM · Seções
+   Estilos específicos por seção da landing
+============================================================= */
+
+/* ==================== FUNDOS ATMOSFÉRICOS ==================== */
+.bg-grid {
+  background-color: var(--navy);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201, 162, 39, 0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(30, 47, 94, 0.6) 0%, transparent 70%),
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(201, 162, 39, 0.04) 80px),
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201, 162, 39, 0.04) 80px);
+}
+
+.bg-noise {
+  position: relative;
+}
+
+.bg-noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.79 0 0 0 0 0.64 0 0 0 0 0.15 0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 120px 0 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: -10%;
+  z-index: 0;
+  will-change: transform;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 30% 30%, rgba(201, 162, 39, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 80% 70%, rgba(30, 47, 94, 0.9) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(13, 27, 62, 0.4) 0%, rgba(13, 27, 62, 0.95) 100%);
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(201, 162, 39, 0.05) 80px),
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201, 162, 39, 0.05) 80px);
+}
+
+/* Camada de foto (placeholder com pattern dourado, blur e overlay 0.4) */
+.hero-photo-layer {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(180deg, rgba(13, 27, 62, 0.4) 0%, rgba(13, 27, 62, 0.85) 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'><defs><pattern id='p' x='0' y='0' width='200' height='200' patternUnits='userSpaceOnUse'><circle cx='100' cy='100' r='55' fill='none' stroke='%23C9A227' stroke-opacity='0.10' stroke-width='1'/><circle cx='100' cy='100' r='35' fill='none' stroke='%23C9A227' stroke-opacity='0.08' stroke-width='1'/><line x1='0' y1='100' x2='200' y2='100' stroke='%23C9A227' stroke-opacity='0.05'/><line x1='100' y1='0' x2='100' y2='200' stroke='%23C9A227' stroke-opacity='0.05'/></pattern></defs><rect width='1600' height='900' fill='%230D1B3E'/><rect width='1600' height='900' fill='url(%23p)'/></svg>");
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  opacity: 0.55;
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 100px 0 60px; }
+}
+
+/* ==================== ESCASSEZ / COUNTDOWN ==================== */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff5e5e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(255, 94, 94, 0.7);
+  animation: pulseDot 1.6s ease-in-out infinite;
+}
+
+.countdown-box {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background: rgba(13, 27, 62, 0.7);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.countdown-box::before,
+.countdown-box::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--gold);
+  border-style: solid;
+  border-width: 0;
+}
+
+.countdown-box::before {
+  top: 0; left: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.countdown-box::after {
+  bottom: 0; right: 0;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+}
+
+.countdown-num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  line-height: 1;
+  color: var(--gold);
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-family: var(--font-display);
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* ==================== TABELA DE BENEFÍCIOS / PREÇO ==================== */
+.price-card {
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.price-card:hover { transform: translateY(-6px); }
+
+.price-card.highlight {
+  background: linear-gradient(160deg, rgba(201, 162, 39, 0.14) 0%, rgba(13, 27, 62, 0.7) 100%);
+  border-color: var(--gold);
+  box-shadow: 0 0 40px rgba(201, 162, 39, 0.18);
+}
+
+.price-old {
+  position: relative;
+  display: inline-block;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.price-old::after {
+  content: '';
+  position: absolute;
+  left: -4px; right: -4px;
+  top: 50%;
+  height: 1px;
+  background: #E06060;
+  transform: rotate(-6deg);
+}
+
+.economy-box {
+  background: rgba(201, 162, 39, 0.10);
+  border: 1px solid var(--gold);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ==================== DIFERENCIAIS ==================== */
+.feature-card {
+  position: relative;
+  padding: 2rem;
+  background: linear-gradient(160deg, rgba(30, 47, 94, 0.4) 0%, rgba(13, 27, 62, 0.6) 100%);
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.3s ease,
+    background 0.3s ease;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  transition: width 0.5s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  background: linear-gradient(160deg, rgba(30, 47, 94, 0.55) 0%, rgba(13, 27, 62, 0.7) 100%);
+}
+
+.feature-card:hover::before { width: 100%; }
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  background: rgba(201, 162, 39, 0.05);
+  transition: transform 0.4s ease, background 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  background: rgba(201, 162, 39, 0.15);
+  transform: rotate(-4deg) scale(1.05);
+}
+
+.feature-num {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(201, 162, 39, 0.18);
+  line-height: 1;
+}
+
+/* ==================== RAZÕES / TRANSIÇÃO ==================== */
+.reason-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(201, 162, 39, 0.04);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.reason-row:hover {
+  background: rgba(201, 162, 39, 0.08);
+  transform: translateX(6px);
+}
+
+.reason-check {
+  flex-shrink: 0;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+/* ==================== STATS / RESULTADOS ==================== */
+.stat-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border-soft);
+  background: rgba(13, 27, 62, 0.4);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--gold);
+  background: rgba(201, 162, 39, 0.04);
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==================== STUDENTS BAND ==================== */
+.student-photo {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.5s ease, border-color 0.3s ease;
+}
+
+.student-photo:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+.student-photo > div:first-child { /* texto */
+  position: relative;
+  z-index: 2;
+}
+
+.student-photo > div:last-child { /* gradient bg */
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.student-photo:hover > div:last-child { opacity: 0.85; }
+
+/* Backgrounds individuais dos placeholders */
+.student-bg-1 {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(201, 162, 39, 0.25), transparent 60%),
+    linear-gradient(135deg, var(--navy-light), var(--navy));
+}
+
+.student-bg-2 {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(232, 195, 80, 0.20), transparent 60%),
+    linear-gradient(135deg, var(--navy-mid), var(--navy));
+}
+
+.student-bg-3 {
+  background:
+    radial-gradient(circle at 50% 70%, rgba(30, 47, 94, 0.8), transparent 60%),
+    linear-gradient(180deg, var(--navy), var(--navy-mid));
+}
+
+.student-bg-4 {
+  background:
+    radial-gradient(circle at 30% 70%, rgba(201, 162, 39, 0.18), transparent 60%),
+    linear-gradient(135deg, var(--navy), var(--navy-light));
+}
+
+/* ==================== CTA FINAL ==================== */
+.cta-final-bg { position: absolute; inset: 0; }
+
+.cta-bg-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201, 162, 39, 0.18) 0%, transparent 70%),
+    linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+}
+
+.cta-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(201, 162, 39, 0.06) 80px),
+    repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201, 162, 39, 0.06) 80px);
+}
+
+/* ==================== FOOTER ==================== */
+footer.site-footer {
+  background: var(--navy-mid);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--border-soft);
+  text-align: center;
+}

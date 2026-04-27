@@ -1,0 +1,36 @@
+/* =============================================================
+   CPPEM · Design Tokens
+   Variáveis de cor, baseadas no brandbook oficial 2026
+============================================================= */
+
+:root {
+  /* Cores primárias */
+  --navy:       #0D1B3E;
+  --navy-mid:   #162247;
+  --navy-light: #1E2F5E;
+
+  /* Dourados */
+  --gold:       #C9A227;
+  --gold-light: #E8C350;
+  --gold-pale:  #F5E4A8;
+  --gold-dark:  #A07B10;
+
+  /* Neutros */
+  --white:      #FFFFFF;
+  --off-white:  #F8F5EE;
+  --cream:      #EDE8D8;
+  --muted:      #8A9BB8;
+
+  /* Bordas */
+  --border:      rgba(201, 162, 39, 0.25);
+  --border-soft: rgba(201, 162, 39, 0.12);
+
+  /* Tipografia */
+  --font-display: 'Cinzel', serif;
+  --font-serif:   'Libre Baskerville', serif;
+  --font-sans:    'DM Sans', sans-serif;
+
+  /* Espaçamento e raios */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+}
