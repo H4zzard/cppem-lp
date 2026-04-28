@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <meta name="description" content="Colégio CPPEM — Bolsa de Acolhimento de 50%. Vagas limitadas para alunos em transferência. Tecnologia de ponta, disciplina e excelência em Caruaru/PE.">
   <meta name="theme-color" content="#0D1B3E">
   <meta property="og:title" content="Colégio CPPEM · Bolsa de Acolhimento 50%">
@@ -25,6 +25,135 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/animations.css">
+
+  <!-- ============================================================
+       FIX DE RESPONSIVIDADE — TRAVA SCROLL HORIZONTAL
+       Coloca por último para vencer o cascade dos CSS externos.
+  ============================================================ -->
+  <style>
+    /* Trava global de scroll horizontal */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    /* Garante que NADA extrapole a viewport */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    /* Imagens e SVGs nunca passam do contêiner */
+    img, svg, video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Conter os orbs flutuantes dentro do hero (principal causador de scroll lateral) */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      overflow: hidden;
+    }
+    .floating-orb {
+      max-width: 80vw;
+      max-height: 80vw;
+    }
+
+    /* Seções: clipa qualquer elemento decorativo que vaze */
+    section, header, footer, nav {
+      overflow-x: clip;
+    }
+
+    /* Filhos de flex/grid precisam de min-width:0 para não quebrar o layout */
+    .grid > *, .flex > * {
+      min-width: 0;
+    }
+
+    /* CTA fixo do mobile: respeita largura da tela e safe-area */
+    .sticky-cta {
+      max-width: calc(100vw - 24px);
+      box-sizing: border-box;
+      white-space: normal;
+      text-align: center;
+      padding-left: env(safe-area-inset-left, 0);
+      padding-right: env(safe-area-inset-right, 0);
+    }
+
+    /* Ajustes específicos para mobile */
+    @media (max-width: 640px) {
+      /* Reduz letter-spacing exagerado em headings grandes (causa de overflow em palavras longas) */
+      h1, h2, h3 {
+        letter-spacing: 0.01em !important;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
+      /* Labels com tracking gigante - reduz no mobile */
+      .chapter-label,
+      .font-display.tracking-\[0\.18em\],
+      .font-display.tracking-\[0\.2em\],
+      .font-display.tracking-\[0\.25em\],
+      .font-display.tracking-\[0\.3em\] {
+        letter-spacing: 0.12em !important;
+        word-break: break-word;
+      }
+
+      /* Countdown não pode ficar maior que a tela */
+      #countdown {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .countdown-box {
+        flex: 1 1 auto;
+        min-width: 60px;
+      }
+
+      /* Cards de pilares e preço: padding mais enxuto */
+      .price-card,
+      article.glass.corner-frame {
+        padding: 1.5rem !important;
+      }
+
+      /* Crest ring (logo grande do hero) não pode ser maior que a tela */
+      .crest-ring {
+        max-width: min(140px, 40vw);
+        max-height: min(140px, 40vw);
+      }
+
+      /* Estatísticas: número grande precisa caber */
+      .stat-num {
+        font-size: clamp(1.6rem, 7vw, 2.4rem) !important;
+        word-break: break-all;
+      }
+
+      /* Garante que botões CTA quebrem texto se necessário */
+      .btn-cta, .btn-ghost {
+        white-space: normal;
+        text-align: center;
+        max-width: 100%;
+      }
+
+      /* Footer grid items centralizados sem vazar */
+      .site-footer .grid > div {
+        word-break: break-word;
+      }
+    }
+
+    /* Telas muito pequenas (≤380px) */
+    @media (max-width: 380px) {
+      .countdown-num {
+        font-size: 1.25rem !important;
+      }
+      .countdown-label {
+        font-size: 0.6rem !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-navy text-white antialiased">
@@ -267,6 +396,10 @@
               <span class="text-white/65 text-sm">Mensalidade</span>
               <span class="price-old font-display text-xl">R$ 1.099</span>
             </div>
+            <div class="flex justify-between items-baseline">
+              <span class="text-white/65 text-sm">Anual (12x)</span>
+              <span class="price-old font-display text-base">R$ 13.188</span>
+            </div>
           </div>
 
           <!-- 9º ano ao 3º EM -->
@@ -275,6 +408,10 @@
             <div class="flex justify-between items-baseline mb-1">
               <span class="text-white/65 text-sm">Mensalidade</span>
               <span class="price-old font-display text-xl">R$ 1.499</span>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <span class="text-white/65 text-sm">Anual (12x)</span>
+              <span class="price-old font-display text-base">R$ 17.988</span>
             </div>
           </div>
 
@@ -301,6 +438,10 @@
               <span class="text-white/85 text-sm">Mensalidade</span>
               <span class="font-display text-2xl text-gold font-bold">R$ 549,50</span>
             </div>
+            <div class="flex justify-between items-baseline">
+              <span class="text-white/85 text-sm">Anual (12x)</span>
+              <span class="font-display text-lg text-gold font-bold">R$ 6.594</span>
+            </div>
           </div>
 
           <!-- 9º ano ao 3º EM -->
@@ -309,6 +450,10 @@
             <div class="flex justify-between items-baseline mb-1">
               <span class="text-white/85 text-sm">Mensalidade</span>
               <span class="font-display text-2xl text-gold font-bold">R$ 749,50</span>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <span class="text-white/85 text-sm">Anual (12x)</span>
+              <span class="font-display text-lg text-gold font-bold">R$ 8.994</span>
             </div>
           </div>
 
